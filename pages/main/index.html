@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" href="../../assets/icons/favicon16.ico">
     <title>Shelter</title>
 </head>
 <body>
     <div class="wrapper">
+        
         <header class="header-container">
             <div class="logo">
                 <a href="#">
@@ -17,45 +18,86 @@
                 </a>
             </div>
 
-            <div class="nav">
+            <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item active">
-                        <a href="">About the shelter</a>
+                    <li class="nav-item">
+                        <a href="" class="link">About the shelter</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Our pets</a>
+                        <a href="" class="link">Our pets</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Help the shelter</a>
+                        <a href="" class="link">Help the shelter</a>
                     </li>
                     <li class="nav-item">
-                        <a href="">Contacts</a>
+                        <a href="" class="link">Contacts</a>
                     </li>
                 </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
             </div>
 
         </header>
 
         <div class="main">
-            <section class="promo">
-                <div class="not-only">
+            
+            <section class="not-only">
                     <div class="content">
                         <h2>Not only people need a house</h2>
                         <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
                         <form action="#pets">
-                            <button class="button"></button>
+                            <button class="button">Make a friend</button>
                         </form>
                     </div>
                     <img src="../../assets/images/start-screen-puppy.png" alt="" class="start-screen-puppy">
-                </div>
             </section>
 
             <section class="about">
-
+                <div class="about-container">                    
+                    <img src="../../assets/images/about-pets.png" alt="about-pets-image">
+                    <div class="content">
+                        <h3>About the shelter <br> “Cozy House”</h3>
+                        <p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+                        <p>We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+                    </div>                    
+                </div>
             </section>
 
             <section class="pets">
-
+                <div class="pets-container">
+                    <h3>Our friends who <br>
+                        are looking for a house</h3>
+                    <div class="corousel">
+                        <div class="btn-prev">⬅</div>
+                        <div class="cards">
+                            <div class="card" data-value="1">
+                                <img src="../../assets/images/pets-katrine.png" alt="pets-card">
+                                <p>Katrine</p>
+                                <button>Learn more</button>
+                            </div>
+                            <div class="card" data-value="2">
+                                <img src="../../assets/images/pets-jennifer.png" alt="pets-card">
+                                <p>Jennifer</p>
+                                <button>Learn more</button>
+                            </div>
+                            <div class="card" data-value="3">
+                                <img src="../../assets/images/pets-woody.png" alt="pets-card">
+                                <p>Woody</p>
+                                <button>Learn more</button>
+                            </div>
+                        </div>
+                        <div class="btn-next">➡</div>
+                    </div>
+                    
+                    <div class="button">
+                        <a href="" class="button-link">Get to know the rest</a>
+                    </div>
+                    
+                </div>
             </section>
 
             <section class="help">
