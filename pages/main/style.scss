@@ -1,3 +1,5 @@
+$main-color: #F1CDB3;
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +18,7 @@
         display: flex;
         height: 60px;
         margin: 0 auto;
-        max-width: 1200px;        
+        max-width: 1280px;        
         width: 100%;
         margin-top: 30px;
         justify-content: flex-end;
@@ -152,11 +154,16 @@
                         letter-spacing: 0.06em;
                         cursor: pointer;
                         border-radius: 100px;
-                        background-color: #f1cdb3;
+                        background-color: $main-color;
                         color: #292929;
                         border: none;
-                        transition: background-color 0.3s ease 0s;
-                                        }
+                        &:hover {
+                            background-color: #FAFAFA;
+                            transition: all 0.5s ease;                        
+                            cursor: pointer;
+                        }
+                        
+                    }
                 }
             }
         }
@@ -233,7 +240,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        border: 2px solid #F1CDB3;
+                        border: 2px solid $main-color;
                         width: 52px;
                         height: 52px; 
                         font-family: Georgia, serif;
@@ -242,7 +249,7 @@
                         letter-spacing: 0.06em;
                         cursor: pointer;
                         &:hover {
-                            background-color: #F1CDB3;
+                            background-color: $main-color;
                             transition: all 0.5s ease; 
                             opacity: 0.5;
                             cursor: pointer;
@@ -265,6 +272,12 @@
                             -webkit-animation: Appearance 1.5s cubic-bezier(0.1, -0.6, 0.2, 0);
                             animation: Appearance 1.5s cubic-bezier(0.1, -0.6, 0.2, 0);
                             transition: all 0.25s ease;
+                            :hover {
+                                box-shadow:  27px 27px 31px $main-color,-27px -27px 31px #ffffff;
+                                transition: all 0.5s ease; 
+                                opacity: 0.5;
+                                cursor: pointer;
+                            }
                             img {
                                 margin-bottom: 30px;
                                 border-style: none;
@@ -291,11 +304,11 @@
                                 letter-spacing: 0.06em;
                                 color: #292929;
                                 background-color: transparent;
-                                border: 2px solid #f1cdb3;
+                                border: 2px solid $main-color;
                                 border-radius: 100px;
                                 transition: all 0.25s ease;
                                 &:hover {
-                                    background-color: #F1CDB3;
+                                    background-color: $main-color;
                                     transition: all 0.5s ease; 
                                     opacity: 0.5;
                                     cursor: pointer;
@@ -306,14 +319,14 @@
                 }
                 .button {
                     width: 257px;
-                    background-color: #F1CDB3;
+                    background-color: $main-color;
                     margin: 60px 0 100px 0;
                     transition: all 0.3s linear 0s;
                     border-radius: 100px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border: 2px solid #F1CDB3;
+                    border: 2px solid $main-color;
                     height: 48px;
                     font-family: Georgia, serif;
                     font-size: 17px;
@@ -375,11 +388,183 @@
                 }
             }
         }
+
+        .donation {
+            background-color: #F6F6F6;
+            padding: 80px 0 100px 0;
+            &-container {
+                margin: 0 auto;
+                max-width: 1200px;
+                padding: 0 40px;
+                display: flex;
+                justify-content: center;
+                .donation-content {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 142px;                    
+                    .donation-img {
+                        height: 100%;
+                        margin-top: 10px;
+                    }
+                    .content {
+                        width: 380px;
+                        margin-left: 30px;
+                    }
+                    h3 {
+                        width: 300px;
+                        height: 90px;
+                        left: 0px;
+                        top: 0px;
+                        font-family: 'Georgia';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 2.188rem;
+                        line-height: 2.813rem;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.06em;
+                        color: #545454;
+                        margin-bottom: 20px;
+                    }
+                    h5 {
+                        font-family: Georgia;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        letter-spacing: 0.06em;
+                        color: #545454;
+                    }
+                    .credit-card {
+                        width: 345px;
+                        height: 39px;
+                        border: 2px solid $main-color;
+                        border-radius: 9px;
+                        background-color: $main-color;
+                        display: flex;
+                        align-items: center;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        img {
+                            margin-left: 14px;
+                            margin-right: 15px;
+                        }
+                        p a{
+                            font-family: Georgia;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 23px;
+                            letter-spacing: 0.06em;
+                            color: #545454;
+                            background-color: transparent;
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                    }
+                    p {
+                        font-family: Arial, sans-serif;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-style: italic;
+                        line-height: 150%;
+                        color: #B2B2B2;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding-top: 40px;
+        .footer-container  {
+            display: flex;
+            max-width: 1200px;
+            padding: 0 40px;
+            margin: 0 auto;
+            justify-content: space-between;
+            .footer-contacts {
+                display: flex;
+                flex-direction: column;
+                margin-top: 16px;
+                margin-bottom: 60px;
+                width: 287px;
+                justify-content: space-between;
+                .footer-title {
+                    font-family: Georgia;
+                    font-size: 35px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    letter-spacing: 0.06em;
+                    color: #FFF;
+                }
+                .footer-text {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        background-color: transparent;
+                        text-decoration: none;
+                    }
+                    h4 {
+                        margin-left: 20px;
+                        a {
+                            color: $main-color;
+                            font-family: Georgia;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 23px;
+                            letter-spacing: 0.06em;
+                        }
+                    }
+                }                
+            }
+            .footer-location {
+                width: 302px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 16px;
+                margin-bottom: 60px;
+                justify-content: space-between;
+                .location-title {
+                    font-family: Georgia;
+                    font-size: 35px;
+                    font-weight: 400;
+                    line-height: 130%;
+                    letter-spacing: 0.06em;
+                    color: #FFF;
+                }
+                .footer-address {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        background-color: transparent;
+                        text-decoration: none;
+                    }
+                    h4 {
+                        margin-left: 20px;
+                        a {
+                            color: $main-color;
+                            font-family: Georgia;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 23px;
+                            letter-spacing: 0.06em;
+                            background-color: transparent;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .footer-img {
+                display: flex;
+                align-items: flex-end;
+                padding-left: 7px;
+                line-height: 0;
+            }
+        }
     }
 }
 
 
 .wrapper .header-container .nav-list .nav-item a:hover {
-    border-bottom: 3px solid #f1cdb3;
+    border-bottom: 3px solid $main-color;
     transition-duration: 0.2s;
 }
