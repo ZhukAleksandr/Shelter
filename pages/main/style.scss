@@ -1,5 +1,23 @@
 $main-color: #F1CDB3;
 
+@keyframes move-right {
+	from {left: -1080px;}
+	to {left: -2160px;}
+}
+.to-right {
+	animation-name: move-right;
+	animation-duration: 1s;
+}
+@keyframes move-left {
+	from {left: -1080px;}
+	to {left: 0px;}
+}
+.to-left {
+	animation-name: move-left;
+	animation-duration: 1s;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -234,7 +252,9 @@ $main-color: #F1CDB3;
                     flex-direction: row;
                     flex-wrap: nowrap;
                     align-items: center;
-                    margin-top: 55px;                    
+                    margin-top: 55px;
+                    // overflow: hidden;
+                    gap: 35px;                    
                     .btn-prev, .btn-next {
                         border-radius: 100px;
                         display: flex;
@@ -255,67 +275,81 @@ $main-color: #F1CDB3;
                             cursor: pointer;
                         }
                     }
-                    .cards {
+                    .slider {
                         display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        margin: 0 53px;
-                        gap: 90px;
-                        transform-style: preserve-3d;
+                        justify-content: space-between;
+                        width: 990px;
                         overflow: hidden;
-                        .card {
+                        position: relative; 
+                        
+                        .cards {
                             display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            background-color: #FAFAFA;
-                            border-radius: 9px;
-                            -webkit-animation: Appearance 1.5s cubic-bezier(0.1, -0.6, 0.2, 0);
-                            animation: Appearance 1.5s cubic-bezier(0.1, -0.6, 0.2, 0);
-                            transition: all 0.25s ease;
-                            :hover {
-                                box-shadow:  27px 27px 31px $main-color,-27px -27px 31px #ffffff;
-                                transition: all 0.5s ease; 
-                                opacity: 0.5;
-                                cursor: pointer;
-                            }
-                            img {
-                                margin-bottom: 30px;
-                                border-style: none;
-                            }
-                            p {
-                                margin-bottom: 30px;
-                                font-family: "Georgia", serif;
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 20px;
-                                line-height: 23px;
-                                letter-spacing: 0.06em;
-                                color: #545454;
-                            }
-                            button {
-                                margin: 0px 0;
-                                margin-bottom: 30px;
-                                padding: 13px 43px;
-                                font-family: "Georgia", serif;
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 17px;
-                                line-height: 130%;
-                                letter-spacing: 0.06em;
-                                color: #292929;
-                                background-color: transparent;
-                                border: 2px solid $main-color;
-                                border-radius: 100px;
-                                transition: all 0.25s ease;
-                                &:hover {
-                                    background-color: $main-color;
-                                    transition: all 0.5s ease; 
-                                    opacity: 0.5;
-                                    cursor: pointer;
+                            gap: 0 90px;
+                            justify-content: space-between;
+                            position: relative;
+                            // overflow: hidden;
+                            left: -1080px;
+                            .item {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 0 90px;
+                                .card {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    background-color: #FAFAFA;
+                                    border-radius: 9px;
+                                    -webkit-animation: Appearance 1.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+                                    animation: Appearance 1.5s cubic-bezier(0.1, -0.6, 0.2, 0);
+                                    transition: all 0.25s ease;
+                                    :hover {
+                                        box-shadow:  27px 27px 31px $main-color,-27px -27px 31px #ffffff;
+                                        transition: all 0.5s ease; 
+                                        opacity: 0.5;
+                                        cursor: pointer;
+                                    }
+                                    img {
+                                        margin-bottom: 30px;
+                                        border-style: none;
+                                    }
+                                    p {
+                                        margin-bottom: 30px;
+                                        font-family: "Georgia", serif;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 20px;
+                                        line-height: 23px;
+                                        letter-spacing: 0.06em;
+                                        color: #545454;
+                                    }
+                                    button {
+                                        margin: 0px 0;
+                                        margin-bottom: 30px;
+                                        padding: 13px 43px;
+                                        font-family: "Georgia", serif;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 17px;
+                                        line-height: 130%;
+                                        letter-spacing: 0.06em;
+                                        color: #292929;
+                                        background-color: transparent;
+                                        border: 2px solid $main-color;
+                                        border-radius: 100px;
+                                        transition: all 0.25s ease;
+                                        &:hover {
+                                            background-color: $main-color;
+                                            transition: all 0.5s ease; 
+                                            opacity: 0.5;
+                                            cursor: pointer;
+                                        }
+                                    }
                                 }
                             }
+                            
                         }
                     }
+                    
                 }
                 .button {
                     width: 257px;
